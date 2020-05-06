@@ -11,7 +11,8 @@ public class ParsingData {
 		ArrayList<ParsingDataGetSet> result = new ArrayList<ParsingDataGetSet>();
 		String link = "https://www.avito.ru/ekaterinburg/telefony/iphone-ASgBAgICAUSeAt4J?s=104&user=1&q=iphone&p=1";
     	
-		Document doc = Jsoup.connect(link).get();   
+		Document doc = Jsoup.connect(link).get();  
+		System.out.println(doc);
     	Elements c1 = doc.select("a.snippet-link");
     	Elements c2 = doc.select("span.snippet-price ");
     	Elements c3 = doc.select("div.snippet-date-info");

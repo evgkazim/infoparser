@@ -1,19 +1,20 @@
 package com.parser.infoparser;
 
 public class ParsingDataGetSet {
-	private String name;
 	private String price;
 	private String date;
-	private String link;
+	private String shop;
 	
+	public String getShop() {
+		return shop;
+	}
+
+	public void setShop(String shop) {
+		this.shop = shop;
+	}
+
 	public ParsingDataGetSet() {}
 
-	public String getName() {
-		return name;
-	}
-	public void setName(String string) {
-		this.name = string;
-	}
 	public String getPrice() {
 		return price;
 	}
@@ -25,11 +26,5 @@ public class ParsingDataGetSet {
 	}
 	public void setDate(String date) {
 		this.date = date;
-	}
-	public String getLink() {
-		return link;
-	}
-	public void setLink(String link) {
-		this.link = link;
 	}
 }

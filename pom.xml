@@ -6,40 +6,60 @@
   <artifactId>infoparser</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-
   <name>infoparser</name>
   <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+	<build>
+	  <plugins>
+	    <plugin>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <artifactId>maven-jar-plugin</artifactId>
+	      <version>3.2.0</version>
+	      <configuration>
+	        <archive>
+	          <manifest>
+	            <addClasspath>true</addClasspath>
+	            <classpathPrefix>lib/</classpathPrefix>
+	            <mainClass>com.parser.infoparser.App</mainClass>
+	          </manifest>
+	        </archive>
+	      </configuration>
+	    </plugin>
+	  </plugins>
+	</build>
   <dependencies>
+	<dependency>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-jar-plugin</artifactId>
+	    <version>3.2.0</version>
+	</dependency>
     <dependency>
       	<groupId>junit</groupId>
       	<artifactId>junit</artifactId>
       	<version>3.8.1</version>
       	<scope>test</scope>
     </dependency>
-    
-    <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
 	<dependency>
     	<groupId>org.jsoup</groupId>
     	<artifactId>jsoup</artifactId>
     	<version>1.13.1</version>
 	</dependency>
-	
 	<dependency>
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
 		<version>8.0.20</version>
 	</dependency>
-	
-	<!-- https://mvnrepository.com/artifact/org.json/json -->
-<dependency>
-    <groupId>org.json</groupId>
-    <artifactId>json</artifactId>
-    <version>20190722</version>
-</dependency>
-	
+	<dependency>
+    	<groupId>org.json</groupId>
+    	<artifactId>json</artifactId>
+    	<version>20190722</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.opencsv</groupId>
+	    <artifactId>opencsv</artifactId>
+	    <version>5.2</version>
+	</dependency>
   </dependencies>
 </project>
